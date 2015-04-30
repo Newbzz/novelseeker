@@ -1,18 +1,575 @@
 <html>
+    
+    
+    
 <head>
+    
+    
+    
 <style type="text/css">
-  
+
 body {
-  background: #000;
-  color: #fff;
-}  
+    background: #f6f6f6;   
+}
+    
+    
+.sidebar {
+    float: left;
+    background: #E31B59;
+    margin-left: -8px;
+    margin-top: -8px;
+    padding: 25px;
+    width: 250px;
+}
+    
+    
+.img { 
+    
+    background: url('logo.png') no-repeat;
+    background-size:contain;
+    
+}
+    
+.sideimage { 
+    color: #fff;
+    font-family: whitney;
+}   
+    
+.side {
+    background: #EFECEE;
+    width: 250px;
+    padding: 25px;
+    margin-left: -8px;
+    height: 100%;
+}
+
+    
+.sfm input {background-color: #fff; 
+    font-size: 11px; 
+    border: 0px; 
+     
+    margin-top: 15px; 
+    color: #999; 
+    letter-spacing: 1px; 
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    width: 245px;
+    font-family: whitney;
+}    
+    
+    
+    
+.number {
+    position: absolute;
+    float: right;
+    left: 108em;
+    top: 5px;
+    font-family: whitney;
+    text-transform: uppercase;
+    font-size: 11px;
+    color: #000;
+    width: 100px;
+    letter-spacing: 1px;
+}
   
-</style>  
-</head> 
+.shelf {
+    position: absolute;
+/*    background: #EFECEE;*/
+    color: #fff;
+    top: 10px;
+    width: 70%;
+    padding: 10px;
+    margin-top: 40px;
+    margin-left: 20em;
+    overflow: scroll;
+}
+    
+#bookbox {
+    background: #fff; 
+    color: #000;
+    width: 210px;
+    height: 325px;
+    float: left;
+    margin-top: 10px;
+    margin-left: 45px;
+    margin-right: 15px;
+    margin-bottom: 15px;
+}
+    
+   a:link {
+       color: #000;
+       text-decoration: none;
+   }
+
+    a:visited {
+        color: #000;
+        text-decoration: none;
+    }
+    
+#pic {
+   
+    height: 325px;
+    background: url('fallen.jpg') no-repeat;
+    background-size:contain;
+}
+   
+    
+#text { 
+    width:150px; 
+    height:265px; 
+    background:#000004; 
+    opacity:0; 
+}    
+    
+#pic:hover #text { 
+    opacity:0.6; 
+     
+    color:#fff; 
+    font-size:13px; 
+   
+    font-family: whitney;
+    padding:30px; 
+}      
+    
+ 
+.pic:hover .text { opacity:0.6; text-align:justify; color:#000000; font-size:20px; font-weight:700; font-family:"Times New Roman", Times, serif; padding:30px; 
+}    
+    
+    
+    
+    
+/*  H O  V E R    F E A T U R E */
+    
+    
+.box {
+    background: #000;
+    color: #fff;
+    width: 100px;
+    padding: 10px;
+    font-family: tahoma; 
+
+}
+    
+.close {
+     background: #000;
+    color: #fff;
+    width: 50px;
+    padding: 10px;
+    font-family: tahoma; 
+    float:right;
+    text-align: right;
+}
+    
+.secret {
+    background: #7becbd;
+    
+}
+    
+#displaybx {
+    background: #fcfdfe;  
+    position: absolute;
+    top: 50px;
+    left: 100px;
+    width: 750px;
+    height: 600px;
+    z-index: 999999;
+    
+}
+    
+a:link {
+color: #fff;
+    
+}
+   
+.novel {
+    height: 550px;
+    margin-top: 20px;
+    margin-left: 20px;
+    width: 350px;
+    
+    background-repeat: no-repeat;
+    padding: 10px;
+    float: left;
+    
+}
+  
+.info {
+    color: #000;
+    font-family: arial;
+    margin-top: 50px;
+    font-size: 12px;
+    line-height: 17px;
+    padding-right: 30px;
+    
+    
+   
+    height: 300px;
+    
+    
+    
+}
+    
+    
+  .hidden {display: none;}
+.unhidden {display: block;}      
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+/*  H O  V E R    F E A T U R E */    
+    
+    
+    
+    
+</style>
+</head>
 <body>
+
+<div class="sidebar">
+    <div class="sideimage">
+        <div class="img">f</div>
+         NOVEL SEEKER
+        
+    </div>
+    
+</div>
+<div class="side">
+    
+
+<form action="/search" method="get" class="sfm">
+    <input type="text" name="q" value="Search" id="sf"/>
+    
+</form>
+    
+    
+   
+    
+    <select style="width: 245px; height: 25px; border: 0px solid; padding: 3px; color: #999; background-color: #fff;  font-family: calibri; text-transform: normal; font-size: 11px; letter-spacing: 1px;">
+<option value="/">Genre</option>
+
+    
+<option value="URL GOES HERE">Crime</option>
+<option value="URL GOES HERE">Fantasy</option>
+<option value="URL GOES HERE">Fiction</option>
+<option value="URL GOES HERE">Historical</option>
+<option value="URL GOES HERE">Horror</option>
+<option value="URL GOES HERE">Humor</option>
+<option value="URL GOES HERE">Mystery</option>
+<option value="URL GOES HERE">Non-Fiction</option>
+<option value="URL GOES HERE">Poetry</option>
+<option value="URL GOES HERE">Romance</option>
+<option value="URL GOES HERE">Sci-Fi</option>
+<option value="URL GOES HERE">Thriller</option>
+<option value="URL GOES HERE">Young Adult</option>        
+</select>
+    
+    
+    
+    
+     <select style="width: 245px; height: 25px; border: 0px solid; padding: 3px; color: #999; background-color: #fff;  font-family: calibri; text-transform: normal; font-size: 11px; letter-spacing: 1px; margin: 15px 0px 0px 0px;">
+<option value="/">Top Searches</option>
+
+    
+<option value="URL GOES HERE">#romance</option>
+<option value="URL GOES HERE">#fantasy</option>
+<option value="URL GOES HERE">#classics</option>
+<option value="URL GOES HERE">#contemporary</option>
+       
+</select>
+    
+ 
+    
+    
+    
+<select style="width: 245px; height: 25px; border: 0px solid; padding: 3px; color: #999; background-color: #fff;  font-family: calibri; text-transform: normal; font-size: 11px; letter-spacing: 1px; margin: 15px 0px 0px 0px;">
+<option value="/">Top Novels</option>
+
+    
+<option value="URL GOES HERE">The Girl On the Train</option>
+<option value="URL GOES HERE">Red Queen</option>
+<option value="URL GOES HERE">All the Bright Places</option>
+<option value="URL GOES HERE">The Nightingale</option>
+<option value="URL GOES HERE">I Was Here</option>
+       
+</select>
+</div>
+
+<div class="number"><a href="reading.html">Reading List</a></div>    
+ 
+    
+    
+    
+    
+    
+    
+<div class="shelf">
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+<!--     B O O K      O N E -->    
+<div id="bookbox">
+<div id="pic">
+<div id="text">
+    <b><span style="letter-spacing: 1px;"> Summary:</span></b>
+        <p>
+        On his eighteenth birthday, Aaron begins to hear strange voices and is convinced he is going insane. But having moved from foster home to foster home, Aaron doesn't know whom he can trust.
+        </p>
+        
+        
+<div class="box"> 
+<a href="javascript:unhide('displaybx');">READ MORE</a>
+</div>
+</div>
+</div>
+</div>
+    
+    
+<div id="displaybx" class="hidden">
+    <div class="close"> 
+<a href="javascript:unhide('displaybx');">X</a>
+    </div>
+    
+<div class="novel" span style="background-image: url('fallen.jpg');"></div>
+    <div class="info">
+       <span style="letter-spacing: 1px; font-size: 15px;"><b>SUMMARY:</b></span>
+            <p> On his eighteenth birthday, Aaron begins to hear strange voices and is convinced he is going insane. But having moved from foster home to foster home, Aaron doesn't know whom he can trust. He wants to confide in the cute girl from class, but fears she'll confirm he's crazy.
+
+Then a mysterious man begins following Aaron. He knows about Aaron's troubled past and his new powers. And he has a message for Aaron: As the son of a mortal and an angel, Aaron has been chosen to redeem the Fallen.
+
+Aaron tries to dismiss the news and resists his supernatural abilities. But he must accept his newfound heritage  and quickly. For the dark powers are gaining strength, and are hell-bent on destroying him....
+            </p>
+       
+<span style="letter-spacing: 1px; font-size: 15px;"><b>SERIES</b></span>
+    <p>
+    Leviathan <i>(2003)</i><br>
+    Aerie <i>(2003)</i><br>
+    Reckoning <i>(2004)</i><br>
+    The End of Days <i>(2011)</i><br>
+    Forsaken <i>(2012)</i><br>
+    Armageddon <i>(2013)</i><br>
+    </p>
+       
+<span style="letter-spacing: 1px; font-size: 15px;"><b>ADD</b></span>
+    <p>
+    [Started ]      [Finished ]      [Abandon]       
+    </p> 
+       
+<span style="letter-spacing: 1px; font-size: 15px;"><b>RATING</b></span>
+    </div>
+</div> 
+    
+    
+    
+    
+    
+    <!--     B O O K      O N E -->  
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+<div id="bookbox">
+    <div id="pic" span style="background-image: url('book3.jpg');">
+    <div id="text">
+        INFO GOES HERE
+        
+        <div class="box"> 
+<a href="javascript:unhide('displaybx');">READ MORE</a>
+</div>
+        
+        
+        
+    </div>
+    </div>
+</div>   
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <div id="bookbox">
+    <div id="pic" span style="background-image: url('book3.jpg');">
+    <div id="text">
+        2nd
+        
+        
+        
+        
+    </div>
+    </div>
+</div> 
+    
+    
+    
+    
+    <div id="bookbox">
+    <div id="pic" span style="background-image: url('book3.jpg');">
+    <div id="text">
+        2nd
+    </div>
+    </div>
+</div> 
+    
+   
   
-  hi there
-  
-  
+</div>    
+    
+    
+   
+    
+    
+    
+
+    
+    
+    
+    
+    
+
+
+
+
 </body>
+    
+    
+<!-- S C R I P T S  -->
+<script>
+    
+    
+/*
+	Dropdown with Multiple checkbox select with jQuery - May 27, 2013
+	(c) 2013 @ElmahdiMahmoud
+	license: http://www.opensource.org/licenses/mit-license.php
+*/ 
+
+$(".dropdown dt a").on('click', function () {
+          $(".dropdown dd ul").slideToggle('fast');
+      });
+
+      $(".dropdown dd ul li a").on('click', function () {
+          $(".dropdown dd ul").hide();
+      });
+
+      function getSelectedValue(id) {
+           return $("#" + id).find("dt a span.value").html();
+      }
+
+      $(document).bind('click', function (e) {
+          var $clicked = $(e.target);
+          if (!$clicked.parents().hasClass("dropdown")) $(".dropdown dd ul").hide();
+      });
+
+
+      $('.mutliSelect input[type="checkbox"]').on('click', function () {
+        
+          var title = $(this).closest('.mutliSelect').find('input[type="checkbox"]').val(),
+              title = $(this).val() + ",";
+        
+          if ($(this).is(':checked')) {
+              var html = '<span title="' + title + '">' + title + '</span>';
+              $('.multiSel').append(html);
+              $(".hida").hide();
+          } 
+          else {
+              $('span[title="' + title + '"]').remove();
+              var ret = $(".hida");
+              $('.dropdown dt a').append(ret);
+              
+          }
+      });    
+    
+    
+    
+</script>    
+    
+    
+    
+    
+<!-- H O V E R -->
+    
+    
+<script type="text/javascript">
+ function unhide(divID) {
+ var item = document.getElementById(divID);
+ if (item) {
+ item.className=(item.className=='hidden')?'unhidden':'hidden';
+ }
+ }
+</script>     
+    
+    
+    
+<!-- E N D -->    
+    
+    
+    
+    
+    
+    
+    
+<!--  S C R I P T S    E N D S -->
+    
+    
 </html>
+
+
+
+<!--   
+
+<div class="sideimage">
+        <img src="noun_125001_cc.png" width="75" height="75">   
+         <div class="name">NOVEL SEEKER</div>
+        
+    </div>
+
+
+id = #   more then once
+class = .     just once
+
+
+-->
