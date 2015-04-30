@@ -1,50 +1,51 @@
 <html>
- 
 <head>
- 
-<title>{Title}</title>
-<link rel="shortcut icon" href="{Favicon}">
-<link rel="alternate" type="application/rss+xml" href="{RSS}">
- 
-<link href='http://fonts.googleapis.com/css?family=Tangerine:400,700' rel='stylesheet' type='text/css'>
-
+    
+<link href='http://fonts.googleapis.com/css?family=Tangerine:400,700' rel='stylesheet' type='text/css'>    
+    
 <style type="text/css">
 
-#fic li{background:#eee;}
-#fic{background:#f6f6f6;color:black;}
-#fic h1 a{color:black;background:#fff;}
-#fic h1:hover:after, #fic h1:hover:before{background:red;}
+ body { 
+     background:#f6f6f6;
+ }
 
-#sort a {color:black;border-bottom:1px solid transparent;}
-#sort a:hover {border-bottom:1px solid red;}
-#sort li a.selected {border-bottom:1px solid black;}
-
-#sort #hidden a:hover {color:white;border-bottom:none;}
-#sort #hidden li a.selected {color:white;border:none;}
-
-#toplinks a{color:black;}
-#toplinks a:hover{border-bottom-color:black;}
-
-.story {background:black;color:white;}
- 
-body{background:white;}
-
-
-
-                      /* --------- STYLING --------- */
-body {position:absolute;margin:0;height:100%;width:100%;font-size:12px;font-family:Helvetica;}
+#sort a {
+    color:black;
+    border-bottom:1px solid transparent;
+    text-decoration: none;
+}
     
-a {text-decoration:none;outline:none;-webkit-transition: all 0.5s ease-in-out;-moz-transition: all 0.5s ease-in-out;-o-transition: all 0.5s ease-in-out;}
-    
-a:hover {-webkit-transition: all 0.5s ease-in-out;-moz-transition: all 0.5s ease-in-out;-o-transition: all 0.5s ease-in-out;}
-    
-    #credit a{position:fixed;right:10px;bottom:10px;padding:5px;line-height:10px;font-size:11px;color:black;background:white;border:1px solid transparent;-moz-transition-duration:1s;-webkit-transition-duration:1s;-o-transition-duration:1s;}#credit a:hover {border:1px solid black;-moz-transition-duration:1s;-webkit-transition-duration:1s;-o-transition-duration:1s;}
-                         
+#sort a:hover {
+    border-bottom:1px solid red;
+    text-decoration: none;
+}
+#sort li a.selected {
+    border-bottom:1px solid black;
+    text-decoration: none;
+}
+
+#sort #hidden a:hover {
+    color:white;border-bottom:none;
+}
+#sort #hidden li a.selected {
+    color:white;border:none;
+    text-decoration: none;
+}
     
     
     
-                        /* ----- SORT LINKS -----*/ 
-#sort a {-webkit-transition: all .6s ease-out; -moz-transition: all .6s ease-out; transition: all .6s ease-out;display:inline-block; padding:5px 10px;margin:0 5px;font:11px Montserrat;text-transform:uppercase;}
+#sort a {
+    -webkit-transition: all .6s ease-out; 
+    -moz-transition: all .6s ease-out;
+    transition: all .6s ease-out;
+    display:inline-block; 
+    padding:5px 10px;
+    margin:0 5px;
+    font:11px Montserrat;
+    text-transform:uppercase;
+    text-decoration: none;
+    
+}
     
 #sort a:hover {-webkit-transition: all .6s ease-out;-moz-transition: all .6s ease-out;transition: all .6s ease-out;}
     
@@ -52,52 +53,72 @@ a:hover {-webkit-transition: all 0.5s ease-in-out;-moz-transition: all 0.5s ease
     
 #hidden{background:rgba(0,0,0,.6);padding:10px;overflow:auto;letter-spacing:1px;color:#eee;text-transform:uppercase;font:10px arial;}
     
-#hidden a {-webkit-transition: all .6s ease-out; -moz-transition: all .6s ease-out; transition: all .6s ease-out;font:10px arial;padding:6px;border-bottom:none;}
+#hidden a {-webkit-transition: all .6s ease-out; -moz-transition: all .6s ease-out; transition: all .6s ease-out;font:10px arial;padding:6px;border-bottom:none;}    
     
-    
-    
-    
-                            /* ----- FICS ----- */
-#stories{position:absolute;top:20px;width:890px;left:50%;margin-left:-445px;text-align:center;}
-    
-    
-    .story {float:left;margin:15px;width:250px;display:inline-block;-webkit-transition: all .6s ease-out; -moz-transition: all .6s ease-out; transition: all .6s ease-out;}
-#fic{padding:5px;font:10px 'Montserrat';}  
-#fic h1 a{display:block;margin:-17px -20px -10px -5px;font:italic 13px 'Playfair Display';letter-spacing:1px;width:250px;padding:5px;line-height:20px;text-align:center;}#fic h1:after{content:"";position:absolute;margin-top:5px;background:transparent;height:2px;width:0px;margin-left:0px;-webkit-transition: all .6s ease-out;-moz-transition: all .6s ease-out;transition: all .6s ease-out;}#fic h1:before{content:"";position:absolute;margin-top:25px;margin-left:0px;background:transparent;height:2px;width:0px;-webkit-transition: all .6s ease-out;-moz-transition: all .6s ease-out;transition: all .6s ease-out;}#fic h1:hover:after{margin-left:-70px;}#fic h1:hover:after, #fic h1:hover:before{width:70px;-webkit-transition: all .6s ease-out; -moz-transition: all .6s ease-out; transition: all .6s ease-out;}
-#fic li{display:inline-block;list-style:none;width:30%;line-height:15px;height:0px;overflow:hidden;margin:5px 0;-webkit-transition: all .4s ease-out; -moz-transition: all .4s ease-out; transition: all .4s ease-out;
-}#fic:hover li{height:15px;-webkit-transition: all .4s ease-out; -moz-transition: all .4s ease-out; transition: all .4s ease-out;}
  
-                        /*----- END STYLING ------*/
+    
+#shelf {
+    position:absolute;top:45px;width:750px;left:55%;margin-left:-445px;text-align:center;
+    
+}    
+    
+    
+.story {
+    float:left;
+    margin-top:10px;
+    margin-right: 5px;
+    margin-left: 5px;
+    margin-bottom: 10px;
+    width:115px; height: 175px;
+    display:inline-block;-webkit-transition: all .6s ease-out; -moz-transition: all .6s ease-out; transition: all .6s ease-out;
+background: #fff;
+}    
+    
+#pic {
+    width: 115px;
+    height: 175px;
+  
+    background-size:contain 
+    
+}
+    
+#fic{background:#f6f6f6;color:black;}    
+    
+    
+#pic:hover .text { 
+    opacity:0.8; 
+     
+    color:#000000; 
+    font-size:10px; 
+    
+    font-family: whitney;
+    padding:20px; 
+}      
+    
+    .text { 
+    width:75px; 
+    height:135px; 
+    background:#FFF; 
+    opacity:0; 
+}  
+
 </style>
+    
 
 </head>
-     
+
+
 <body>
 
-<div id="stories">
 
-<!----- begin sorting links --->
-<div class="links">
+    <div class="links">
 <div id="sort">
 <ul id="filters" class="option-set clearfix" data-option-key="filter">
  <center> 
  
- <!---- these are the ones that will show up on the main page. to add a new "tag", copy this below:
  
---------------------- 
  
- <li><a href="#filter" data-option-filter=".tag">tagname</a></li>
  
---------------------- 
- 
- you can put in anything with one word, or hyphenated. e.g.:
- 
-<li><a href="#filter" data-option-filter=".angsty">angst</a></li>
-<li><a href="#filter" data-option-filter=".high-school">high school</a></li>
- 
-you will not see the "tag" on the main page, so you can use your own keywords that you'll recognize, like hs - high school or ship names. 
- 
- --->
 <li><a href="#filter" data-option-filter="*" class="selected">All</a></li>
 
 <!----- ENTER THEM HERE! ---->
@@ -110,75 +131,91 @@ you will not see the "tag" on the main page, so you can use your own keywords th
 
  
    </div>
- </div> 
- 
- <div id="container" class="clearfix">
-
-<!----- end sorting links --->
-
-<!----
-
----------------------
-
-        F I C S! 
-        copy and paste the template below.
+ </div>
+    
+    
+    
+   
+<div id="shelf"> 
+    <div id="container" class="clearfix">
         
-where it says "put-your-tags-in-here", use the tags from above (e.g. angst, high-school) and put them there.
-
-e.g.
-
-<div id="fic" class="story high-school angst">
-
-you can add as many as you want, just make sure you leave 'story' there!
-
----------------------
-
-
-
-<div id="fic" class="story put-your-tags-in-here">
-<h1><a href="LINK">FIC TITLE</a></h1>
-
-FANFIC DESCRIPTION
-
-
-<li>word count</li> <li>pairing</li> <li style="color:#e7e404">★★★★★</li> 
+    <div id="fic" class="story unread">
+        <div id="pic" span style="background-image: url('read1.jpg');" >
+            <div class="text"> <b>SUMMARY</b>
+            <p>
+            Everybody gets to be supermodel gorgeous. What could be wrong with that? 
+Tally is about to turn sixteen, and she can't wait.
+            </p>
+             READ MORE
+        </div>  
+    </div>
 </div> 
 
-
----------------------
-
- 
------->
-
- 
-<div id="fic" class="story angst">
-<h1><a href="/">Fic title</a></h1>
-fic description here!
-<li>word count</li> <li>pairing</li> <li style="color:#e7e404">★★★★★</li> 
-</div> 
-     
-     
-     
-     <div id="fic" class="story fluff">
-<h1><a href="/">Fic title</a></h1>
-fic description here!
-<li>word count</li> <li>pairing</li> <li style="color:#e7e404">★★★★★</li> 
-</div> 
- 
-
-
-
-<!------>
- 
-
+        
+        
+        
+    <div id="fic" class="story start">
+        <div id="pic" span style="background-image: url('read2.jpg');" >
+        
+        <div class="text"> <b>SUMMARY</b>
+            <p>
+            When Elliot finds herself dead for the third time, she knows she must have messed up, big-time. She doesn't remember..
+            </p>
+             READ MORE
+        </div> 
+        
+        
+        
+        </div>
+        </div> 
+        
+        
+        
+        
+        
+        
+        <div id="fic" class="story start">
+        <div id="pic" span style="background-image: url('read3.jpg');" ></div>
+    </div> 
+        
+        <div id="fic" class="story finish">
+        <div id="pic" span style="background-image: url('read4.jpg');" ></div>
+    </div> 
+        
+        <div id="fic" class="story unread">
+        <div id="pic" span style="background-image: url('read5.jpg');" ></div>
+            
+            
+    </div> 
+        
+        <div id="fic" class="story unread">
+        <div id="pic" span style="background-image: url('warm.jpg');" ></div>
+    </div> 
+        
+        <div id="fic" class="story abandon">
+        <div id="pic" span style="background-image: url('read6.jpg');" ></div>
+    </div> 
+        
+        
+       
+        
+        
 
 </div>
- 
  </div>
- 
-<div id="credit"><a href="http://feverfires.tumblr.com">✿</a></div>  
-
-<!------ S C R I P T S! ------>
+        
+        
+        
+        
+        
+    
+    
+    
+</body>
+    
+    
+<!-- S C R I P T -->
+    
 <link href='http://fonts.googleapis.com/css?family=Playfair+Display:400,700,400italic|Montserrat:400,700' rel='stylesheet' type='text/css'>
 
 <!---- masonry scripts ---->
@@ -258,10 +295,10 @@ $("#hidden").animate({"height": "0px", "opacity":"0"}, "slow");
 
  
  });
- </script>
- 
- <!-----end filter scripts------> 
- 
-
-</body>
+ </script>    
+    
+    
+<!-- S C R I P T -->   
+    
+    
 </html>
