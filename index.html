@@ -534,6 +534,45 @@ $(".dropdown dt a").on('click', function () {
 <!--  S C R I P T S    E N D S -->
     
     
+<script>
+	
+	
+	
+//"harry%2520potter"
+
+$('#search').on('submit', function (event) {
+  var title = $('#title').val();
+  var urlTitle = encodeURIComponent(encodeURIComponent(title));
+  event.preventDefault();
+  
+  console.log(urlTitle);
+  
+  if (title) {
+    $.get("https://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20xml%20where%20url%3D%22https%3A%2F%2Fwww.goodreads.com%2Fsearch%2Findex.xml%3Fkey%3DWuFVVhqcbOHtg7DrwI0wQ%26q%3D" + urlTitle + "%22&format=json&diagnostics=true&callback=", function (data) {
+      var results = data.query.results.GoodreadsResponse.search.results.work;
+
+      
+      for (i = 0; i < results.length; i++) {
+        var title = results[i].best_book.title;
+        var image = results[i].best_book.image_url;
+        $('body').append('<h2 id="displaybx-'+ i +'" onclick="javascript:unhide(\'displaybx-'+ i + '\')">'+title+'</h2>');
+        $('body').append('<div class="image-item"><div class="image" style="background-image: url('+image+');"></div></div>');
+      }
+      
+  
+});
+  }
+});	
+	
+	
+	
+	
+	
+</script>    
+    
+    
+    
+    
 </html>
 
 
