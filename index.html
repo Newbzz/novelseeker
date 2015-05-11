@@ -1,24 +1,45 @@
 <html>
 <head>
-<style type="text/css">
+        <style type="text/css">
 
 body {
     background: #f6f6f6;   
 }
+
+.navbox {
+    background: #fff;
+    margin: -10px;
+    height: 35px;
+}
     
+.navigation {
+    background: #fff;
+    margin-left: 200px; 
+}
+    
+#navi {
+    color: #000;
+    font-family: whitney;
+    font-size: 12px;
+    text-transform: uppercase;
+    padding: 10px;
+    margin-left: 50px;
+    float: left;
+}
     
 .sidebar {
     float: left;
-    background: #E31B59;
     margin-left: -8px;
-    margin-top: -8px;
-    padding: 25px;
-    width: 250px;
+    margin-top: 50px;
+    padding: 45px;
+    height: 120px;
+    width: 200px;
+    letter-spacing:  12px;
+    font-family: whitney;
 }
-    
-    
+     
 .img { 
-    background: url('logo.png') no-repeat;
+    background: url('logo3.png') no-repeat;
     background-size:contain;
 }
     
@@ -28,15 +49,14 @@ body {
 }   
     
 .side {
-    background: #EFECEE;
     width: 250px;
     padding: 25px;
     margin-left: -8px;
-    height: 100%;
+    height: 300px;
 }
 
-    
-.sfm input {background-color: #fff; 
+.sfm input {
+    background-color: #fff; 
     font-size: 11px; 
     border: 0px; 
     margin-top: 15px; 
@@ -44,43 +64,31 @@ body {
     letter-spacing: 1px; 
     padding-top: 10px;
     padding-bottom: 10px;
-    padding-left: 10px;
-    width: 245px;
+    padding-left: 20px;
+    width: 555px;
+    border-radius: 10px;
     font-family: whitney;
-}    
-    
-    
-    
-.number {
-    position: absolute;
-    float: right;
-    left: 108em;
-    top: 5px;
-    font-family: whitney;
-    text-transform: uppercase;
-    font-size: 11px;
-    color: #000;
-    width: 100px;
-    letter-spacing: 1px;
-}
-  
+    z-index: 999999;
+}     
+      
 .shelf {
     position: absolute;
-/*    background: #EFECEE;*/
     color: #fff;
-    top: 10px;
+    top: 50px;
+    height: 600px;
     width: 70%;
     padding: 10px;
     margin-top: 40px;
     margin-left: 20em;
     overflow: scroll;
+    overflow-x: visible;
 }
     
-#bookbox {
-    background: #fff; 
+.bookbox {
+    background: ; 
     color: #000;
-    width: 210px;
-    height: 325px;
+    width: 120px;
+    height: 180px;
     float: left;
     margin-top: 10px;
     margin-left: 45px;
@@ -93,26 +101,29 @@ a:link {
     text-decoration: none;
 }
 
-    a:visited {
-        color: #000;
-        text-decoration: none;
-    }
+a:visited {
+    color: #000;
+    text-decoration: none;
+}
     
-#pic {
+a:hover {
+    color: #ec4d63;   
+}
+    
+.bookbox-pic {
     height: 325px;
     background: url('fallen.jpg') no-repeat;
     background-size:contain;
 }
    
-    
-#text { 
-    width:150px; 
-    height:265px; 
+.bookbox-text { 
+    width:70px; 
+    height:125px; 
     background:#000004; 
     opacity:0; 
 }    
     
-#pic:hover #text { 
+.bookbox-pic:hover .bookbox-text { 
     opacity:0.6; 
     color:#fff; 
     font-size:13px; 
@@ -120,8 +131,7 @@ a:link {
     padding:30px; 
 }      
     
- 
-.pic:hover .text { 
+.bookbox-pic:hover .bookbox-text { 
 	opacity:0.6; 
 	text-align:justify; 
 	color:#000000; 
@@ -203,38 +213,100 @@ color: #fff;
     
 /*  H O  V E R    F E A T U R E */    
     
+   
+.image-item {
+    display: inline-block;
+    width: 50%;
+}
+
+.image {
+  display: inline-block;
+  width: 100%;
+  height: 0;
+  padding-bottom: 154%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}    
+    
     
     
     
 </style>
 </head>
 <body>
+        <div class="navbox">    
+        <div class="navigation">
+               
+                <div id="navi">
+                <a href="/">Write Review</a>
+                </div>
+    
+                <div id="navi">
+                <a href="/">Reading List</a>
+                </div>
+    
+                <div id="navi">
+                <a href="/">Popular Reads</a>
+                </div>
+    
+                <div id="navi">
+                <a href="/">New Releases</a>
+                </div>
+        </div>    
+        </div>   
+    
 
+    
+    
+    
+    
+    
+    <form action="/search" method="get" class="sfm" id="search">
+    <input type="text" name="q" value="" placeholder="Search Books" id="sf"/>
 
+       
+        
+        
 
 <div class="sidebar">
+    
+     <div class="logo">
+    <img src="logo5.png">
+    </div>
+    
+    NOVEL SEEKER
+    </div>
+
     <div class="sideimage">
-        <div class="img">f</div>
-         NOVEL SEEKER
+       
+      
         
     </div>
+
+    
+    
+    
     
 </div>
 <div class="side">
     
 
-<form action="/search" method="get" class="sfm">
-    <input type="text" name="q" value="Search" id="sf"/>
-    
-</form>
     
     
-   
+<!--
+<form action="/search" method="get" class="sfm" id="search">
+    <input type="text" name="q" value="" placeholder="Search Books" id="sf"/>
+-->
+    
+    
+    
+    
     
     <select style="width: 245px; height: 25px; border: 0px solid; padding: 3px; color: #999; background-color: #fff;  font-family: calibri; text-transform: normal; font-size: 11px; letter-spacing: 1px;">
+        
+        
 <option value="/">Genre</option>
-
-    
 <option value="URL GOES HERE">Crime</option>
 <option value="URL GOES HERE">Fantasy</option>
 <option value="URL GOES HERE">Fiction</option>
@@ -251,16 +323,18 @@ color: #fff;
 </select>
     
     
+ 
+    
     
     
      <select style="width: 245px; height: 25px; border: 0px solid; padding: 3px; color: #999; background-color: #fff;  font-family: calibri; text-transform: normal; font-size: 11px; letter-spacing: 1px; margin: 15px 0px 0px 0px;">
-<option value="/">Top Searches</option>
+<option value="/">Popular Searches</option>
 
     
-<option value="URL GOES HERE">#romance</option>
-<option value="URL GOES HERE">#fantasy</option>
-<option value="URL GOES HERE">#classics</option>
-<option value="URL GOES HERE">#contemporary</option>
+<option value="URL GOES HERE">vampires</option>
+<option value="URL GOES HERE">romance</option>
+<option value="URL GOES HERE">utopia</option>
+<option value="URL GOES HERE">future</option>
        
 </select>
     
@@ -279,9 +353,10 @@ color: #fff;
 <option value="URL GOES HERE">I Was Here</option>
        
 </select>
+</form>
 </div>
 
-<div class="number"><a href="list.html">Reading List</a></div>    
+   
  
     
     
@@ -289,7 +364,14 @@ color: #fff;
     
     
     
-<div class="shelf">
+<div class="shelf" id="shelf">
+    
+    
+    
+    
+    
+    
+  
     
     
     
@@ -300,63 +382,16 @@ color: #fff;
     
     
     
-<!--     B O O K      O N E -->    
-<div id="bookbox">
-<div id="pic">
-<div id="text">
-    <b><span style="letter-spacing: 1px;"> Summary:</span></b>
-        <p>
-        On his eighteenth birthday, Aaron begins to hear strange voices and is convinced he is going insane. But having moved from foster home to foster home, Aaron doesn't know whom he can trust.
-        </p>
-        
-        
-<div class="box"> 
-<a href="javascript:unhide('displaybx');">READ MORE</a>
-</div>
-</div>
-</div>
-</div>
     
     
-<div id="displaybx" class="hidden">
-    <div class="close"> 
-<a href="javascript:unhide('displaybx');">X</a>
-    </div>
     
-<div class="novel" span style="background-image: url('fallen.jpg');"></div>
-    <div class="info">
-       <span style="letter-spacing: 1px; font-size: 15px;"><b>SUMMARY:</b></span>
-            <p> On his eighteenth birthday, Aaron begins to hear strange voices and is convinced he is going insane. But having moved from foster home to foster home, Aaron doesn't know whom he can trust. He wants to confide in the cute girl from class, but fears she'll confirm he's crazy.
+    
+    
+    
+    
+    
+    
 
-Then a mysterious man begins following Aaron. He knows about Aaron's troubled past and his new powers. And he has a message for Aaron: As the son of a mortal and an angel, Aaron has been chosen to redeem the Fallen.
-
-Aaron tries to dismiss the news and resists his supernatural abilities. But he must accept his newfound heritage  and quickly. For the dark powers are gaining strength, and are hell-bent on destroying him....
-            </p>
-       
-<span style="letter-spacing: 1px; font-size: 15px;"><b>SERIES</b></span>
-    <p>
-    Leviathan <i>(2003)</i><br>
-    Aerie <i>(2003)</i><br>
-    Reckoning <i>(2004)</i><br>
-    The End of Days <i>(2011)</i><br>
-    Forsaken <i>(2012)</i><br>
-    Armageddon <i>(2013)</i><br>
-    </p>
-       
-<span style="letter-spacing: 1px; font-size: 15px;"><b>ADD</b></span>
-    <p>
-    [Started ]      [Finished ]      [Abandon]       
-    </p> 
-       
-<span style="letter-spacing: 1px; font-size: 15px;"><b>RATING</b></span>
-    </div>
-</div> 
-    
-    
-    
-    
-    
-    <!--     B O O K      O N E -->  
     
     
     
@@ -374,65 +409,7 @@ Aaron tries to dismiss the news and resists his supernatural abilities. But he m
     
     
     
-    
-    
-    
-<div id="bookbox">
-    <div id="pic" span style="background-image: url('book3.jpg');">
-    <div id="text">
-        INFO GOES HERE
-        
-        <div class="box"> 
-<a href="javascript:unhide('displaybx');">READ MORE</a>
-</div>
-        
-        
-        
-    </div>
-    </div>
-</div>   
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    <div id="bookbox">
-    <div id="pic" span style="background-image: url('book3.jpg');">
-    <div id="text">
-        2nd
-        
-        
-        
-        
-    </div>
-    </div>
-</div> 
-    
-    
-    
-    
-    <div id="bookbox">
-    <div id="pic" span style="background-image: url('book3.jpg');">
-    <div id="text">
-        2nd
-    </div>
-    </div>
-</div> 
+  
     
    
   
@@ -444,12 +421,7 @@ Aaron tries to dismiss the news and resists his supernatural abilities. But he m
     
     
 
-    <form id="search">
-  <input type="text" id="title">
-  <input type="submit" value="Search">
-</form>
-    
-    
+  
     
     
 
@@ -469,41 +441,41 @@ Aaron tries to dismiss the news and resists his supernatural abilities. But he m
 	license: http://www.opensource.org/licenses/mit-license.php
 */ 
 
-$(".dropdown dt a").on('click', function () {
-          $(".dropdown dd ul").slideToggle('fast');
-      });
-
-      $(".dropdown dd ul li a").on('click', function () {
-          $(".dropdown dd ul").hide();
-      });
-
-      function getSelectedValue(id) {
-           return $("#" + id).find("dt a span.value").html();
-      }
-
-      $(document).bind('click', function (e) {
-          var $clicked = $(e.target);
-          if (!$clicked.parents().hasClass("dropdown")) $(".dropdown dd ul").hide();
-      });
-
-
-      $('.mutliSelect input[type="checkbox"]').on('click', function () {
-        
-          var title = $(this).closest('.mutliSelect').find('input[type="checkbox"]').val(),
-              title = $(this).val() + ",";
-        
-          if ($(this).is(':checked')) {
-              var html = '<span title="' + title + '">' + title + '</span>';
-              $('.multiSel').append(html);
-              $(".hida").hide();
-          } 
-          else {
-              $('span[title="' + title + '"]').remove();
-              var ret = $(".hida");
-              $('.dropdown dt a').append(ret);
-              
-          }
-      });    
+//$(".dropdown dt a").on('click', function () {
+//          $(".dropdown dd ul").slideToggle('fast');
+//      });
+//
+//      $(".dropdown dd ul li a").on('click', function () {
+//          $(".dropdown dd ul").hide();
+//      });
+//
+//      function getSelectedValue(id) {
+//           return $("#" + id).find("dt a span.value").html();
+//      }
+//
+//      $(document).bind('click', function (e) {
+//          var $clicked = $(e.target);
+//          if (!$clicked.parents().hasClass("dropdown")) $(".dropdown dd ul").hide();
+//      });
+//
+//
+//      $('.mutliSelect input[type="checkbox"]').on('click', function () {
+//        
+//          var title = $(this).closest('.mutliSelect').find('input[type="checkbox"]').val(),
+//              title = $(this).val() + ",";
+//        
+//          if ($(this).is(':checked')) {
+//              var html = '<span title="' + title + '">' + title + '</span>';
+//              $('.multiSel').append(html);
+//              $(".hida").hide();
+//          } 
+//          else {
+//              $('span[title="' + title + '"]').remove();
+//              var ret = $(".hida");
+//              $('.dropdown dt a').append(ret);
+//              
+//          }
+//      });    
     
     
     
@@ -537,14 +509,16 @@ $(".dropdown dt a").on('click', function () {
 <!--  S C R I P T S    E N D S -->
     
     
-<script>
-	
-	
-	
 
+	
+    
+<!-- Load jQuery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 
+<script>	
+<!-- jQuery Search -->
 $('#search').on('submit', function (event) {
-  var title = $('#title').val();
+  var title = $('#sf').val();
   var urlTitle = encodeURIComponent(encodeURIComponent(title));
   event.preventDefault();
   
@@ -552,15 +526,31 @@ $('#search').on('submit', function (event) {
   
   if (title) {
     $.get("https://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20xml%20where%20url%3D%22https%3A%2F%2Fwww.goodreads.com%2Fsearch%2Findex.xml%3Fkey%3DWuFVVhqcbOHtg7DrwI0wQ%26q%3D" + urlTitle + "%22&format=json&diagnostics=true&callback=", function (data) {
+        
       var results = data.query.results.GoodreadsResponse.search.results.work;
-
+      var container = $('#shelf');
+      var books = [];
+      
       
       for (i = 0; i < results.length; i++) {
-        var title = results[i].best_book.title;
-        var image = results[i].best_book.image_url;
-        $('body').append('<h2 id="displaybx-'+ i +'" onclick="javascript:unhide(\'displaybx-'+ i + '\')">'+title+'</h2>');
-        $('body').append('<div class="image-item"><div class="image" style="background-image: url('+image+');"></div></div>');
+          var image = results[i].best_book.image_url;
+          var resultTitle = results[i].best_book.title;
+//        $('body').append('<h2 id="displaybx-'+ i +'" onclick="javascript:unhide(\'displaybx-'+ i + '\')">'+title+'</h2>');
+//        $('body').append('<div class="image-item"><div class="image" style="background-image: url('+image+');"></div></div>');
+          
+          var book = $('<div>', {class: 'bookbox', id: 'bookbox-'+i});
+          var title = $('<div>', {class: 'bookbox-text', text: resultTitle });
+          var pic = $('<div>', {class: 'bookbox-pic', style: 'background-image: url('+ image +');'});
+          
+          var detail = $('<div>', {class: 'bookbox-detail'});
+          
+          pic.append(title);
+          book.append(pic);
+          
+          books.push(book);
       }
+        
+      container.empty().append(books);
       
   
 });
